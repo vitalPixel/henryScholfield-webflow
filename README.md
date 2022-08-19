@@ -1,6 +1,6 @@
 # Henry Scholfield's website webflow backup
 
-> This is an automated backup of the Webflow website hosted at https://henry-scholfield.webflow.io.
+This is an automated backup of the Webflow website hosted at https://henry-scholfield.webflow.io.
 
 ## How it works
 
