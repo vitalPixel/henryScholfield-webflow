@@ -2616,6 +2616,7 @@ li {
 
 .category-title__h1.category-title__h1--subtitle {
   font-size: 13vh;
+  line-height: 0.8;
 }
 
 .category-title {
