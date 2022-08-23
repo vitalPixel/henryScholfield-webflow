@@ -2607,16 +2607,21 @@ li {
 }
 
 .category-title__h1 {
+  background-image: url("https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6303bfd93ed24c9ba20665c4_Aug-22-2022%2015-54-58--optimized.gif");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
   -webkit-transform: translate(0px, 0px) rotate(180deg);
   -ms-transform: translate(0px, 0px) rotate(180deg);
   transform: translate(0px, 0px) rotate(180deg);
+  color: transparent;
   font-size: 15vh;
   text-transform: uppercase;
 }
 
 .category-title__h1.category-title__h1--subtitle {
+  background-image: url("https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6303bfd92ad77edecbe06dc2_Aug-22-2022%2015-55-10--optimizied.gif");
   font-size: 13vh;
-  line-height: 0.8;
 }
 
 .category-title {
