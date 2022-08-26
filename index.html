@@ -97,49 +97,27 @@
   </head>
   <body>
     <section class="header">
-      <div
-        data-poster-url="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6304bdc26a11c97023e87151_mask__home--scaled-poster-00001.jpg"
-        data-video-urls="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6304bdc26a11c97023e87151_mask__home--scaled-transcode.mp4,https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6304bdc26a11c97023e87151_mask__home--scaled-transcode.webm"
-        data-autoplay="true"
-        data-loop="true"
-        data-wf-ignore="true"
-        class="background-video w-background-video w-background-video-atom"
-      >
-        <video
-          id="3d0b530e-2a20-e55e-2045-4afa2b345162-video"
-          autoplay=""
-          loop=""
-          style="background-image: url('https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6304bdc26a11c97023e87151_mask__home--scaled-poster-00001.jpg')"
-          muted=""
-          playsinline=""
-          data-wf-ignore="true"
-          data-object-fit="cover"
-        >
-          <source src="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6304bdc26a11c97023e87151_mask__home--scaled-transcode.mp4" data-wf-ignore="true" />
-          <source src="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6304bdc26a11c97023e87151_mask__home--scaled-transcode.webm" data-wf-ignore="true" />
-        </video>
-      </div>
       <div class="header__content w-embed">
         <video
           class="header__bckgd"
           width="1404"
-          height="180"
+          height="108"
           playsinline
           autoplay
           loop
           muted
           poster="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6304bdc26a11c97023e87151_mask__home--scaled-poster-00001.jpg"
         >
-          <source src="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6304bdc26a11c97023e87151_mask__home--scaled-transcode.mp4" />
-          <source src="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6304bdc26a11c97023e87151_mask__home--scaled-transcode.webm" />
+          <source src="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6307ab3d099fdf3424c4c365_mask__home2--scaled-transcode.webm" />
+          <source src="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6307ab3d099fdf3424c4c365_mask__home2--scaled-transcode.mp4" />
           Your browser does not support the video tag.
         </video>
         <h1 class="header__h1">
-          <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="scholfield-title" width="100%" height="160px">
+          <svg class="header__h1__mask" xmlns="http://www.w3.org/2000/svg" aria-labelledby="scholfield-title" width="1404" height="108">
             <title id="scholfield-title">Henry Scholfield</title>
             <defs>
               <clipPath id="mask__henryScholfield">
-                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Proza Libre" font-size="9.3vw" fill="white">HENRY SCHOLFIELD</text>
+                <text x="50%" y="0" dominant-baseline="hanging" text-anchor="middle" font-family="Proza Libre" font-size="9.3vw" fill="white">HENRY SCHOLFIELD</text>
               </clipPath>
             </defs>
           </svg>
@@ -347,7 +325,7 @@
     <div class="w-embed">
       <style>
         /* Resize root element font-size on smaller screens */
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 736px) {
           html {
             font-size: 12px;
           }
@@ -394,6 +372,7 @@
         .h--hide-scrollbars {
           overflow: -moz-scrollbars-none;
           -ms-overflow-style: none;
+          scrollbar-width: none;
         }
 
         .h--hide-scrollbars::-webkit-scrollbar {
@@ -446,20 +425,37 @@
           cursor: url(https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/62e2a25f576adf48d84f1813_next.svg), e-resize;
         }
 
+        /* Mask the homepage header */
         .header__content {
           clip-path: url(#mask__henryScholfield);
+          margin-top: 8px;
+          position: relative;
         }
 
         .header__bckgd {
-          position: absolute;
           width: 100%;
           height: auto;
-          object-fit: cover;
         }
 
         .header__h1 {
-          position: relative;
+          position: absolute;
           top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+
+        .header__h1__mask {
+          width: 100%;
+        }
+
+        h1 {
+          margin-top: 0px;
+          margin-bottom: 0px;
+          font-size: 9.3vw;
+          line-height: 1;
+          font-weight: 800;
+          text-transform: uppercase;
         }
       </style>
     </div>
@@ -469,7 +465,7 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script src="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/js/webflow.d7419662f.js" type="text/javascript"></script>
+    <script src="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/js/webflow.952de5e7a.js" type="text/javascript"></script>
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
     <script>
       /* Start of slider code */
