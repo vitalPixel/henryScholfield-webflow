@@ -2161,7 +2161,7 @@ li {
 .slider__nav {
   position: absolute;
   left: 0%;
-  top: 20%;
+  top: 13vw;
   right: 0%;
   bottom: 0%;
   display: -webkit-box;
@@ -2725,6 +2725,10 @@ li {
 }
 
 .background-video-4 {
+  display: none;
+}
+
+.background-video-5 {
   display: none;
 }
 
