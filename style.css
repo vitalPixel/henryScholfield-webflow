@@ -2101,6 +2101,7 @@ li {
 }
 
 .slider__pag {
+  z-index: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
