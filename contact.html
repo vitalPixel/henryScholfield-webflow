@@ -32,6 +32,23 @@
         h1 {
           font-size: 11vw;
         }
+
+        .slider__nav {
+          top: 24vw;
+        }
+      }
+
+      /* Resize category titles on small screens */
+      @media screen and (max-width: 1023px) {
+        .category-title__h1 {
+          font-size: 5vh;
+        }
+        .category-title__h1.category-title__h1--subtitle {
+          font-size: 5vh;
+        }
+        .video-list {
+          width: 80vw;
+        }
       }
 
       /* Hide scroll bars on the slider pagination container */
@@ -58,6 +75,7 @@
       .h--hide-scrollbars {
         overflow: -moz-scrollbars-none;
         -ms-overflow-style: none;
+        scrollbar-width: none;
       }
 
       .h--hide-scrollbars::-webkit-scrollbar {
@@ -91,9 +109,56 @@
         writing-mode: vertical-rl;
       }
 
-      /* Display first video on the homepage */
-      .slider__slide__wrapper:first-child .slider__slide {
+      /* Rotate slide title 90 deg */
+      .slide__title__wrapper {
+        writing-mode: vertical-rl;
+      }
+
+      /* Display first slide on the homepage when page loads */
+      .slider__slide__wrapper:first-child {
         display: block;
+      }
+
+      /* Use custom cursor for the slider navigation */
+      .slider__nav__btn--prev {
+        cursor: url(https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/62e2a25f6de7976cca18b16d_prev.svg), w-resize;
+      }
+
+      .slider__nav__btn--next {
+        cursor: url(https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/62e2a25f576adf48d84f1813_next.svg), e-resize;
+      }
+
+      /* Mask the homepage header */
+      .header__content {
+        clip-path: url(#mask__henryScholfield);
+        margin-top: 8px;
+        position: relative;
+      }
+
+      .header__bckgd {
+        width: 100%;
+        height: auto;
+      }
+
+      .header__h1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      .header__h1__mask {
+        width: 100%;
+      }
+
+      h1 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 9.3vw;
+        line-height: 1;
+        font-weight: 800;
+        text-transform: uppercase;
       }
     </style>
   </head>
@@ -103,25 +168,25 @@
       <h2>Contact.</h2>
     </header>
     <section class="content__wrapper h--full-screen h--horizontal-scroll h--hide-scrollbars">
-      <div class="content content__contact">
+      <div class="content__block content__contact">
         <div class="content__contact">
           <h3>UK &amp; WORLDWIDE</h3>
-          <a href="https://www.academyfilms.com" target="_blank" class="contact__a">Academy Films</a>
-          <div class="contact__block">
+          <a href="https://www.academyfilms.com" target="_blank" class="content__a">Academy Films</a>
+          <div class="contact__block__extra">
             <h4>Executive Producer</h4>
             <p class="contact__p">Simon Cooper</p>
-            <p class="contact__p"><a href="mailto:simon@academyfilms.com" class="contact__a">simon@academyfilms.com</a></p>
+            <p class="contact__p"><a href="mailto:simon@academyfilms.com" class="content__a">simon@academyfilms.com</a></p>
           </div>
         </div>
       </div>
-      <div class="content">
+      <div class="content__block">
         <div class="content__contact">
           <h3>US</h3>
-          <a href="http://www.resetcontent.com" class="contact__a">RESET</a>
-          <div class="contact__block">
+          <a href="http://www.resetcontent.com" class="content__a">RESET</a>
+          <div class="contact__block__extra">
             <h4>Executive Producer</h4>
             <p class="contact__p">Jen Beitler</p>
-            <p class="contact__p"><a href="mailto:jen@resetcontent.com" class="contact__a">jen@resetcontent.com</a></p>
+            <p class="contact__p"><a href="mailto:jen@resetcontent.com" class="content__a">jen@resetcontent.com</a></p>
           </div>
         </div>
       </div>
@@ -129,10 +194,11 @@
     <nav class="menu">
       <div class="menu__content">
         <ul role="list" class="menu__items w-list-unstyled">
+          <li class="menu__item"><a href="/" class="menu__item__text">home</a></li>
           <li class="menu__item"><a href="/music-videos" class="menu__item__text">music videos</a></li>
-          <li class="menu__item"><a href="/about" class="menu__item__text">commercials</a></li>
-          <li class="menu__item"><a href="/about" class="menu__item__text">unsolicited</a></li>
-          <li class="menu__item"><a href="/about" class="menu__item__text">representation</a></li>
+          <li class="menu__item"><a href="/music-videos" class="menu__item__text">commercials</a></li>
+          <li class="menu__item"><a href="/music-videos" class="menu__item__text">unsolicited</a></li>
+          <li class="menu__item"><a href="/representation" class="menu__item__text">representation</a></li>
         </ul>
       </div>
       <div data-w-id="2fa91226-8736-4624-3696-ab2f9b036da1" class="menu__btn__open"><div class="menu__btn__text">menu</div></div>
@@ -144,7 +210,7 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script src="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/js/webflow.d7419662f.js" type="text/javascript"></script>
+    <script src="https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/js/webflow.1d78c8170.js" type="text/javascript"></script>
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   </body>
 </html>

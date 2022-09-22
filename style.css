@@ -1979,7 +1979,7 @@ h1 {
 
 h2 {
   margin: 0px;
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 1;
   font-weight: 800;
   text-transform: uppercase;
@@ -1987,7 +1987,7 @@ h2 {
 
 h3 {
   margin: 0px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1;
   font-weight: 800;
   text-transform: uppercase;
@@ -1996,7 +1996,7 @@ h3 {
 h4 {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   line-height: 24px;
   font-weight: 800;
 }
@@ -2219,7 +2219,10 @@ li {
 }
 
 .content__wrapper {
-  margin-top: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .h--full-screen {
@@ -2275,13 +2278,12 @@ li {
   align-items: center;
 }
 
-.content {
+.content__block {
   max-width: 36rem;
-  min-width: 28rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
-.content.content__contact {
+.content__block.content__contact {
   min-width: 23rem;
 }
 
@@ -2414,7 +2416,7 @@ li {
   border-width: 3px;
   border-color: #dffc10;
   border-radius: 16px;
-  background-color: transparent;
+  background-color: rgba(223, 252, 16, 0.5);
   cursor: pointer;
 }
 
@@ -2433,6 +2435,7 @@ li {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .title__items {
@@ -2495,7 +2498,7 @@ li {
   text-align: center;
 }
 
-.contact__a {
+.content__a {
   color: #dffc10;
   font-size: 1.5rem;
 }
@@ -2504,7 +2507,7 @@ li {
   margin-bottom: 0px;
 }
 
-.contact__block {
+.contact__block__extra {
   margin-top: 40px;
 }
 
@@ -2565,7 +2568,7 @@ li {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   left: 0%;
   top: auto;
   right: 0%;
@@ -2608,20 +2611,14 @@ li {
 }
 
 .category-title__h1 {
-  background-image: url("https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6303bfd93ed24c9ba20665c4_Aug-22-2022%2015-54-58--optimized.gif");
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
   -webkit-transform: translate(0px, 0px) rotate(180deg);
   -ms-transform: translate(0px, 0px) rotate(180deg);
   transform: translate(0px, 0px) rotate(180deg);
-  color: transparent;
   font-size: 15vh;
   text-transform: uppercase;
 }
 
 .category-title__h1.category-title__h1--subtitle {
-  background-image: url("https://uploads-ssl.webflow.com/6244940ae3781f86b8c33252/6303bfd92ad77edecbe06dc2_Aug-22-2022%2015-55-10--optimizied.gif");
   font-size: 13vh;
 }
 
@@ -2731,6 +2728,38 @@ li {
 
 .background-video-5 {
   display: none;
+}
+
+.content-section {
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.content__wrapper--grid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  grid-auto-columns: minmax(28rem, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+.about__wrapper {
+  overflow: scroll;
+  padding-bottom: 8rem;
+}
+
+.press-awards__text {
+  font-size: 1.2rem;
+}
+
+.press-awards__heading {
+  line-height: 1.2;
+  text-transform: capitalize;
 }
 
 #w-node-b979a236-73b8-84f5-fad2-32212cb358c5-5f8f656a {
